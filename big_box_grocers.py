@@ -3,7 +3,7 @@ import itertools
  
 if __name__=='__main__':
     sc = SparkContext()
-    rdd = sc.textFile('/user/estrella.moreira/output_test0517/big_box_grocers/*')
+    rdd = sc.textFile('/user/estrella.moreira/hw4_outpu_test/big_box_grocers/*')
     header = rdd.first()
     rdd.sample(False, 0.01) \
         .coalesce(1) \
